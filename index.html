@@ -36,19 +36,32 @@
       }
     }
     
-    .service-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%; /* ensure consistent card height */
-  transition: all 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-              0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
+      .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .service-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .service-card h3 {
+            min-height: 3rem;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem !important;
+        }
+        
+        .service-card p {
+            flex-grow: 1;
+            margin-bottom: 1.5rem !important;
+        }
+        
+        .service-card .timeline-section {
+            margin-top: auto;
+        }
 
     
     .timeline-dot::before {
@@ -84,7 +97,7 @@
     <div class="z-10 max-w-4xl">
       <p class="text-blue-600 font-medium mb-4">HIGH ON CONTENT </br> PRESENTS</p>
       <h1 class="proposal-heading text-6xl font-bold mb-10 h-20">Dawg Energy</h1>
-      <p class="text-xl text-gray-700 mb-8">Research, Strategy & Branding</p>
+      <p class="text-xl text-gray-700 mb-8">Research, Strategy & Design</p>
       <div class="bg-white p-6 rounded-lg shadow-lg inline-block">
         <p class="text-gray-700">Prepared exclusively for</p>
         <p class="text-2xl font-semibold text-blue-800">Parvinder Mann</p>
@@ -124,92 +137,91 @@
   </section>
   
   <!-- Services Overview -->
-  <section class="py-20 px-6 bg-blue-50">
-    <div class="max-w-8xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold text-blue-800 mb-4">Our Comprehensive Approach</h2>
-        <p class="text-lg text-gray-700 max-w-2xl mx-auto">We've designed a five-phase process to develop a brand that's strategically sound, visually distinctive, and commercially effective.</p>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-        <!-- Service Card 1 -->
-        <div class="service-card bg-white rounded-lg shadow-lg p-8 transition-all duration-300">
-          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-blue-800 mb-3">Research</h3>
-          <p class="text-gray-700 mb-4">Comprehensive market and competitor analysis to uncover insights that inform strategy.</p>
-          <div class="flex justify-between text-sm">
-            <span class="font-medium text-gray-500">Timeline:</span>
-            <span class="text-blue-600 font-medium">10 Days</span>
-          </div>
+<section class="py-20 px-6 bg-blue-50">
+        <div class="max-w-8xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Our Comprehensive Approach</h2>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto">We've designed a five-phase process to develop a brand that's strategically sound, visually distinctive, and commercially effective.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-white rounded-lg shadow-lg p-8 transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-800">Research</h3>
+                    <p class="text-gray-700">Comprehensive market and competitor analysis to uncover insights that inform strategy.</p>
+                    <div class="timeline-section flex justify-between text-sm">
+                        <span class="font-medium text-gray-500">Timeline:</span>
+                        <span class="text-blue-600 font-medium">10 Days</span>
+                    </div>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card bg-white rounded-lg shadow-lg p-8 transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-800">Brand Strategy</h3>
+                    <p class="text-gray-700">Developing your brand's positioning, story, voice, and messaging to connect with your audience.</p>
+                    <div class="timeline-section flex justify-between text-sm">
+                        <span class="font-medium text-gray-500">Timeline:</span>
+                        <span class="text-blue-600 font-medium">5 Days</span>
+                    </div>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card bg-white rounded-lg shadow-lg p-8 transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-800">Visual Identity</h3>
+                    <p class="text-gray-700">Creating distinctive logo guidelines, color palette, typography, and design elements for your brand.</p>
+                    <div class="timeline-section flex justify-between text-sm">
+                        <span class="font-medium text-gray-500">Timeline:</span>
+                        <span class="text-blue-600 font-medium">7 Days</span>
+                    </div>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card bg-white rounded-lg shadow-lg p-8 transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-800">Website Design</h3>
+                    <p class="text-gray-700">Banner images design and content copywriting for your digital presence.</p>
+                    <div class="timeline-section flex justify-between text-sm">
+                        <span class="font-medium text-gray-500">Timeline:</span>
+                        <span class="text-blue-600 font-medium">5 Days</span>
+                    </div>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="service-card bg-white rounded-lg shadow-lg p-8 transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-blue-800">Packaging Design</h3>
+                    <p class="text-gray-700">Developing packaging that stands out on shelf and communicates your brand's energy.</p>
+                    <div class="timeline-section flex justify-between text-sm">
+                        <span class="font-medium text-gray-500">Timeline:</span>
+                        <span class="text-blue-600 font-medium">10 Days</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <!-- Service Card 2 -->
-        <div class="service-card bg-white rounded-lg shadow-lg p-8 transition-all duration-300">
-          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-blue-800 mb-3">Brand Strategy</h3>
-          <p class="text-gray-700 mb-4">Developing your brand's positioning, story, voice, and messaging to connect with your audience.</p>
-          <div class="flex justify-between text-sm">
-            <span class="font-medium text-gray-500">Timeline:</span>
-            <span class="text-blue-600 font-medium">5 Days</span>
-          </div>
-        </div>
-        
-        <!-- Service Card 3 -->
-        <div class="service-card bg-white rounded-lg shadow-lg p-8 transition-all duration-300">
-          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-blue-800 mb-3">Visual Identity</h3>
-          <p class="text-gray-700 mb-4">Creating a distinctive logo guidelines, color palette, typography, and design elements for your brand.</p>
-          <div class="flex justify-between text-sm">
-            <span class="font-medium text-gray-500">Timeline:</span>
-            <span class="text-blue-600 font-medium">7 Days</span>
-          </div>
-        </div>
-        
-        <!-- Service Card 4 -->
-        <div class="service-card bg-white rounded-lg shadow-lg p-8 transition-all duration-300">
-          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-blue-800 mb-3">Website Design</h3>
-          <p class="text-gray-700 mb-4">Banner images design and content copywriting for your digital presence.</p>
-          <div class="flex justify-between text-sm">
-            <span class="font-medium text-gray-500">Timeline:</span>
-            <span class="text-blue-600 font-medium">5 Days</span>
-          </div>
-        </div>
-        
-        <!-- Service Card 5 -->
-        <div class="service-card bg-white rounded-lg shadow-lg p-8 transition-all duration-300">
-          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-blue-800 mb-3">Packaging Design</h3>
-          <p class="text-gray-700 mb-4">Developing packaging that stands out on shelf and communicates your brand's energy.</p>
-          <div class="flex justify-between text-sm">
-            <span class="font-medium text-gray-500">Timeline:</span>
-            <span class="text-blue-600 font-medium">10 Days</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
+    </section>
   <!-- Detailed Services -->
   <section class="py-20 px-6">
     <div class="max-w-5xl mx-auto">
@@ -422,7 +434,7 @@
           <div class="flex justify-between items-center">
             <span class="text-xl font-semibold text-blue-800">Total Investment</span>
             <div class="text-right">
-              <span class="text-xl font-bold text-blue-800">INR 11,4995 + 799 per Website Banners</span>
+              <span class="text-xl font-bold text-blue-800">INR 1,14,995 + 7,999 per Banners</span>
               <p class="text-sm text-gray-600">Plus applicable GST</p>
             </div>
           </div>
@@ -534,7 +546,7 @@
         </div>
         
         <div class="mt-6 pt-6 border-t border-gray-200">
-          <p class="text-blue-800 font-medium">This proposal is valid for 2 months from the date of issue (until August 23, 2025).</p>
+          <p class="text-blue-800 font-medium">This proposal is valid for days 40 from the date of issue (until August 2nd, 2025)</p>
         </div>
       </div>
     </div>
@@ -676,7 +688,7 @@
               </svg>
             </div>
             <p class="text-white text-lg font-medium">Proposal Valid Until</p>
-            <p class="text-yellow-300 font-bold text-xl">August 23, 2025</p>
+            <p class="text-yellow-300 font-bold text-xl">August 2nd, 2025</p>
           </div>
         </div>
       </div>
